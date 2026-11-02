@@ -8,7 +8,9 @@
 <body>
 
     <h1 align="center">Hotel Room Booking Form</h1>
-    <form action="#" method="post" align="center">
+    <fieldset>
+    <legend><b>Personal Info</b></legend>
+    <form action="#" method="post">
 
         <!-- Name -->
          <label for="fullname">Full Name:</label>
@@ -23,8 +25,11 @@
         <!-- Phone -->
          <label for="phone">Phone:</label>
          <input type="phone" id="phone" name="phone" required>
-        <br><br>
+    </fieldset>
+    <br><br>
 
+    <fieldset>
+    <legend><b>Booking Details</b></legend>
         <!-- Check-in Date -->
          <label for="checkin">Check-in Date:</label>
          <input type="date" id="checkin" name="checkin" required>
@@ -33,6 +38,11 @@
         <!-- Check-out Date -->
          <label for="checkout">Check-out Date:</label>
          <input type="date" id="checkout" name="checkout" required>
+        <br><br>
+
+        <!-- Number of Guests -->
+         <label for="guests">Number of Guests:</label>
+         <input type="number" id="guests" name="guests" min="1" max="4" required>
         <br><br>
 
         <!-- Room Type -->
@@ -45,24 +55,23 @@
             <option value="double ac">Double Bed (AC)</option>
             <option value="suite">Suite</option>
          </select>
-        <br><br>
+    </fieldset>
+    <br><br>
 
-        <!-- Number of Guests -->
-         <label for="guests">Number of Guests:</label>
-         <input type="number" id="guests" name="guests" min="1" max="4" required>
-        <br><br>
-
+    <fieldset>
+    <legend><b>Additional Requests</b></legend>
         <!-- Special Requests -->
          <label for="requests">Special Requests:</label>
          <br>
          <textarea id="requests" name="requests" rows="4" cols="50"></textarea>
-        <br><br>
+    </fieldset>
+        <br>
         
         <!-- Book Button -->
-        <input type="submit" value="Book Now">
+        <button type="submit">Book Now</button>
 
         <!-- Reset Button -->
-        <input type="reset" value="Reset Form">
+        <button type="reset">Reset Form</button>
     </form>
 
 </body>
